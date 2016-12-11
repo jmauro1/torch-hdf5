@@ -5,6 +5,11 @@ flexible, and supported by a wide range of other software - including **MATLAB**
 **Python**, and **R**.
 
 [![Build Status](https://travis-ci.org/deepmind/torch-hdf5.png?branch=master)](https://travis-ci.org/deepmind/torch-hdf5)
+
 ## Usage
 
 For further information, please consult [the user manual](doc/usage.md).
+
+# Requirements
+
+* HDF5 library version 1.8.x or 1.10.x (compiled with v1.8 API compatibility)

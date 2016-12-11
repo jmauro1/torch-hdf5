@@ -2,12 +2,12 @@ local torch = require 'torch'
 local path = require 'pl.path'
 local stringx = require 'pl.stringx'
 local bit = require 'bit'
-
+local ffi = require 'ffi'
 local HDF5File = torch.class("hdf5.HDF5File")
 
 function HDF5File:__init(filename, fileID)
     assert(filename and type(filename) == 'string', "HDF5File.__init() requires a filename - perhaps you want HDF5File.create()?")
-    assert(fileID and type(fileID) == 'number', "HDF5File.__init() requires a fileID - perhaps you want HDF5File.create()?")
+    assert(fileID and (type(fileID) == 'number' or ffi.istype('int64_t', fileID)), "HDF5File.__init() requires a fileID - perhaps you want HDF5File.create()?")
     if fileID < 0 then
         error("HDF5File: fileID " .. fileID .. " is not valid")
     end
