@@ -14,7 +14,7 @@ description = {
   maintainer = "Dan Horgan <danhgn+github@gmail.com>"
 }
 
-dependencies = {'penlight', 'totem' }
+dependencies = {'penlight' }
 build = {
    type = "command",
    build_command = [[
